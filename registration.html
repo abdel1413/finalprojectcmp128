@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" href="registration.css">
+
+</head>
+<body> 
+    <div id="title" >
+        <h1>Registeration form</h1>
+    </div>
+    
+    <form action="" name="myform" id="container">
+        
+         
+        <div id="nameinfo">
+
+            <div class="fields">
+                <label for="input" class="label firstname" >First Name</label><span>
+                    <input type="text" class="firstname" id="firstname">
+                </span>
+            </div>
+
+            <div class="fields">
+                <label for="input" class="label lastname" >Last Name</label><span>
+                    <input type="text" class="lastname" id="lastname">
+                </span>
+            </div>
+
+            
+            <div class="fields">
+                <label for="email" class=" label emaillab" >Email</label>
+                    <input type="text" class="emailaddress" id="emailaddress">
+                
+            </div>
+            <div class="fields">
+                <label for="phone" class="label phonelab" >Phone</label><span>
+                    <input type="text" name="phone" id= "phone" class="phone">
+                </span>
+            </div>
+            <div>
+               <label for="country" class="label country">Country</label><span>
+                   <input type="text" name="country" id="country" class="label country">
+               </span>
+            </div>
+
+            <div>
+                <label for="organization" class="label organization ">Organe </label><span>
+                    <input type="text"  name = "organization" class="organization" id="organization">
+                    </span>
+               
+            </div>
+
+            <div>
+                <label for="password" class="label passwd">Password</label><span>
+                    <input type="text" name="password" id ="password" class="password">
+                </span>
+            </div>
+
+            <div>
+                <label for="password" class="label confirm">Confirm</label><span>
+                    <input type="text" name="confirm" id="confirm" class="confirm">
+                </span>
+            </div>
+
+
+
+
+
+            <ul id ="errors">
+                <li id="firstNError">Firs name is required</li> 
+                <li id="lastNError">Last name is required</li>
+                <li id="emailError">Invalid or missing email address</li>
+                <li id="passwordError">Password must contain 10 to 20 characters</li>
+                <li id="lowerError">Password must contain at least one lowercase character.</li>
+                <li id="upperError">Password must contain at least one uppercase character.</li>
+                <li id="digitError"> Password must contain at least one digit.</li>
+                <li id="ErrorMatching">Password and confirmation password don’t match</li>
+                <li id="organizationError">Missing attendee organization.</li>
+                <li id="countryError"> Missing attendee country.</li>
+                <li id="phoneError">Wrong phone number provided.</li>
+                
+            </ul>
+
+
+
+
+        <div id="coupon-container">
+            <div>
+            <ul class="typeoffer">
+                <label for="registration type" class="label_reg">
+                    Offer type:
+                </label>
+                <li>
+                    <input type="radio" value="20.00" id="level_1" name="price_level"> 
+                     <label for="author">Author($400)</label> 
+                </li>
+                <li>
+                    <input type="radio" value="20.00" id="level_2" name="price_level">
+                     <label for="participant"> Participant($300)</label>
+                    </li>
+                <li>
+                    <input type="radio" id="level_3" value="20.00" name="price_level">
+                     <label for="student">Student($100)</label> 
+                    </li>
+            </ul>
+        </div>
+            <table id="coupon-table">
+                <tbody>
+                    <tr>
+                        <th colspan="2" style="text-align: left;">
+                            <label id="coupon-header" for="coupon-input">
+                               Offer: Use discount code 'Lehman College' to get
+                               50% Off. (Limited time offer).
+                            </label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id="coupon-input" name="coupon-input" autocomplete="off"
+                            aria-labelledby="coupon-header coupon message">
+                        </td>
+                        <td style="text-align: center;" width ="40%">
+                            <button id="coupon-button" type="button" data-qid="input_29" value="">
+                                Apply
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" style="text-align: left;">
+                            <span id="coupon-message" role="alert">
+                            </span>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div id="totalDiv">
+            
+        </div>
+
+            <input id = "register" type="button" value="Register" name="register">
+
+        </div>
+        
+
+    </form>
+</body>
+<script src="registration.js"></script>
+</html>
